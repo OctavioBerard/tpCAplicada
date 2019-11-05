@@ -53,31 +53,6 @@ read -a array
 echo ${array[*]} | tr " " "\n" | sort -n | tr " " "\n"
 }
 
-#function ordenar(){
-#echo "Ingrese 5 numeros: "
-#read a
-#read b
-#read c
-#read d
-#read e
-#declare -a array=($a $b $c $d $e)
-#
-#echo ${array[*]}
-#for((i = 0; i<5; i++))
-#do
-#	for((j = i; j<5-i-1; j++))
-#	do
-#		if((${array[j]} > ${array[$((j+1))]}))
-#		then
-#			temp = ${array[$j]}
-#			array[$j] = ${array[$((j+1))]}
-#			array[$((j+1))] = $temp
-#		fi
-#	done
-#done
-#echo ${array[*]}
-#}
-
 function tipo_archivo(){
 read -p "ingrese path" path
 	echo $(ls -q -U $path | awk -F . '{print $AB}' | sort | uniq -c | awk '{print $2,$1}')
