@@ -13,9 +13,9 @@ echo "7)salir"
 mostrar_menu
 
 function saludar(){
-    NOMBRE=$1
-    echo "Chau $NOMBRE"
-    sleep 2
+	NOMBRE=$1
+	echo "Chau $NOMBRE"
+	exit 1
 }
 
 function fibonacci(){
